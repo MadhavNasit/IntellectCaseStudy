@@ -3,6 +3,8 @@ import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
+import { useTheme } from '@react-navigation/native';
+
 import { DailyScreen, HomeScreen, SettingsScreen } from 'screen';
 import { Icon } from 'component';
 import {
@@ -14,6 +16,9 @@ import {
   SettingsIcon,
 } from 'asset/svgs';
 
+/**
+ * Type definition for the Bottom Tab Navigator params.
+ */
 export type TabParamsList = {
   home: undefined;
   daily: undefined;
@@ -25,12 +30,32 @@ export type TabParamsList = {
  */
 const Tab = createBottomTabNavigator<TabParamsList>();
 
+const useScreenOptions = () => {
+  const { colors } = useTheme();
+
+  return {
+    headerShown: false,
+    tabBarStyle: {
+      backgroundColor: colors.primary,
+    },
+    tabBarActiveTintColor: colors.tab_active,
+    tabBarInactiveTintColor: colors.tab_inactive,
+  };
+};
+
+/**
+ * BottomTab Component - Handles bottom navigation between screens.
+ */
 const BottomTab = () => {
+  const screenOptions = useScreenOptions();
+
   /**
-   * Generate screen options for tab navigator
+   * Generates screen options for each tab.
    *
-   * @param title - string: Title of the screen.
-   * @param icon - JSX.Element | IconTypes: Icon element or icon type.
+   * @param title - Title of the screen.
+   * @param icon - Default icon component.
+   * @param iconFilled - Icon component when the tab is active.
+   * @returns Configuration object for the tab screen.
    */
   const generateScreenOptions = useCallback(
     ({
@@ -42,7 +67,7 @@ const BottomTab = () => {
       icon: JSX.Element;
       iconFilled: JSX.Element;
     }): BottomTabNavigationOptions => ({
-      title: title,
+      title,
       tabBarIcon: ({ focused, color, size }) => (
         <Icon icon={focused ? iconFilled : icon} size={size} color={color} />
       ),
@@ -51,7 +76,7 @@ const BottomTab = () => {
   );
 
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen
         name="home"
         component={HomeScreen}
@@ -74,7 +99,7 @@ const BottomTab = () => {
         name="settings"
         component={SettingsScreen}
         options={generateScreenOptions({
-          title: 'Home',
+          title: 'Settings',
           icon: <SettingsIcon />,
           iconFilled: <SettingsFilledIcon />,
         })}

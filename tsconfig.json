@@ -8,6 +8,9 @@
       "component": ["./src/component"],
       "navigation/*": ["./src/navigation/*"],
       "asset/*": ["./src/asset/*"],
+      "hook": ["./src/hook"],
+      "theme": ["./src/theme"],
+      "theme/*": ["./src/theme/*"],
       "*": ["./*"],
       "root/*": ["./*"],
       "src/*": ["./src/*"]
