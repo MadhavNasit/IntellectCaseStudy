@@ -5,7 +5,9 @@
     "paths": {
       "navigation": ["./src/navigation"],
       "screen": ["./src/screen"],
+      "component": ["./src/component"],
       "navigation/*": ["./src/navigation/*"],
+      "asset/*": ["./src/asset/*"],
       "*": ["./*"],
       "root/*": ["./*"],
       "src/*": ["./src/*"]
