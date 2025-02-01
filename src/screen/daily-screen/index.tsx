@@ -8,6 +8,7 @@ import { Button, Greeting, Icon, Screen, Text } from 'component';
 import { vs } from 'utils';
 import { BellIcon } from 'asset/svgs';
 import makeStyles from './styles';
+import { ProgressBar } from 'src/component/ProgressBar';
 
 /**
  * DailyScreen component renders a banner with greeting, information about daily activities,
@@ -50,6 +51,7 @@ export const DailyScreen = (): JSX.Element => {
   return (
     <Screen safeAreaEdges={[]} preset="scroll">
       {renderBanner()}
+      <ProgressBar progress={1} />
     </Screen>
   );
 };
