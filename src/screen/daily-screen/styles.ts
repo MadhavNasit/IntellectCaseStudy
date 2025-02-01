@@ -46,6 +46,7 @@ export default (colors: Colors, insets: EdgeInsets) =>
     progressWrapper: {
       paddingVertical: vs(spacing.lg),
       paddingHorizontal: s(spacing.md),
+      marginBottom: vs(spacing.sm),
       backgroundColor: colors.bg_secondary,
     },
     title: {
@@ -58,5 +59,23 @@ export default (colors: Colors, insets: EdgeInsets) =>
       flexDirection: 'row',
       columnGap: s(spacing.xxs),
       alignItems: 'center',
+    },
+
+    // footer style
+    footerWrapper: {
+      alignItems: 'center',
+      paddingHorizontal: s(spacing.xxxl),
+      paddingTop: vs(spacing.md),
+      paddingBottom: vs(spacing.xxl),
+    },
+    separator: {
+      height: 1,
+      width: s(60),
+      backgroundColor: colors.text_light,
+      marginBottom: vs(spacing.lg),
+    },
+    quote: {
+      textAlign: 'center',
+      color: colors.text_light,
     },
   });

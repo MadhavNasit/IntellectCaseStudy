@@ -24,6 +24,8 @@ const en = {
       title_other: '{{count}}/{{total}} Completed. Keep going',
       sessionTogether: '{{count}} people doing session with you this hour',
     },
+    quote:
+      '"I advise all of my clients to develop a consistent daily routine which includes a mindfulness exercise"\n- Linda Rinn, Clinical Psychologist',
   },
   settings: {
     title: 'Settings',

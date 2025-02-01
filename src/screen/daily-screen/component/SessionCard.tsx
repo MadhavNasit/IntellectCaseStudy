@@ -65,6 +65,8 @@ const makeStyles = (colors: Colors, completed: boolean) =>
       backgroundColor: completed ? colors.active_card : colors.card_secondary,
       columnGap: s(spacing.md),
       borderWidth: 0,
+      marginBottom: vs(spacing.sm),
+      marginHorizontal: s(spacing.md),
     },
     iconWrapper: {
       backgroundColor: completed ? colors.active_card : colors.green,
