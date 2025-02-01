@@ -1,7 +1,10 @@
 import { Theme } from '@react-navigation/native';
 import { colors, themeColors } from 'theme/colors';
 
-type Colors = typeof colors;
+export type Colors = ThemeWithMode['light'] &
+  ThemeWithMode['common'] &
+  typeof colors &
+  Theme['colors'];
 
 export interface ThemeWithMode {
   light: typeof themeColors.light;
@@ -15,10 +18,7 @@ export interface ExtendedTheme extends Theme {
   // Learn more:
   //   https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types
   //   https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
-  colors: ThemeWithMode['light'] &
-    ThemeWithMode['common'] &
-    Colors &
-    Theme['colors'];
+  colors: Colors;
 }
 
 declare module '@react-navigation/native' {

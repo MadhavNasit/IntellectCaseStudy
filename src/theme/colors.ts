@@ -10,6 +10,7 @@ export const colors = {
   platinum: '#e6e4e5',
   pearl: '#fcfbf6',
   gray: '#7d7e7e',
+  red: '#F00001',
 };
 
 export const themeColors = {
@@ -22,13 +23,14 @@ export const themeColors = {
   },
   dark: {
     primary: colors.deepNavy,
-    background: colors.ivory,
-    card: colors.white,
-    text: colors.ebony,
-    border: colors.platinum,
+    background: colors.ebony,
+    card: colors.deepNavy,
+    text: colors.platinum,
+    border: colors.gray,
   },
   common: {
     tab_active: colors.pearl,
     tab_inactive: colors.gray,
+    danger: colors.red,
   },
 };

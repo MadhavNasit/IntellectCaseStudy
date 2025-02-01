@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import en from './languages/en';
+import en, { Translations } from './languages/en';
 import fr from './languages/fr';
 
 // the translations
@@ -40,3 +40,13 @@ i18n
   });
 
 export default i18n;
+
+// Create a type that represents all possible translation paths
+export type TranslationKeys = RecursiveKeyOf<Translations>;
+
+// Helper type to create dot notation paths
+type RecursiveKeyOf<TObj extends Record<string, any>> = {
+  [TKey in keyof TObj & string]: TObj[TKey] extends Record<string, any>
+    ? `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
+    : `${TKey}`;
+}[keyof TObj & string];
