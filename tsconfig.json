@@ -3,6 +3,9 @@
     "jsx": "react-native",
     "baseUrl": "./",
     "paths": {
+      "navigation": ["./src/navigation"],
+      "screen": ["./src/screen"],
+      "navigation/*": ["./src/navigation/*"],
       "*": ["./*"],
       "root/*": ["./*"],
       "src/*": ["./src/*"]
