@@ -11,26 +11,30 @@ export const colors = {
   pearl: '#fcfbf6',
   gray: '#7d7e7e',
   red: '#F00001',
+  darkGray: '#264b5b',
+  cadetGrey: '#93a5ad',
 };
 
 export const themeColors = {
   light: {
-    primary: colors.deepNavy,
     background: colors.ivory,
     card: colors.white,
     text: colors.ebony,
     border: colors.platinum,
   },
   dark: {
-    primary: colors.deepNavy,
     background: colors.ebony,
     card: colors.deepNavy,
     text: colors.platinum,
     border: colors.gray,
   },
   common: {
+    primary: colors.deepNavy,
+    secondary: colors.darkGray,
     tab_active: colors.pearl,
     tab_inactive: colors.gray,
     danger: colors.red,
+    text: colors.white,
+    text_light: '#93a5ad',
   },
 };

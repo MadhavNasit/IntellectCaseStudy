@@ -102,12 +102,12 @@ const makeStyles = (colors: Colors) =>
     h2: {
       fontSize: fontSize.h2,
       lineHeight: lineHeight[fontSize.h2],
-      fontFamily: typography.semiBold,
+      fontFamily: typography.medium,
     },
     h3: {
       fontSize: fontSize.h3,
       lineHeight: lineHeight[fontSize.h3],
-      fontFamily: typography.semiBold,
+      fontFamily: typography.medium,
     },
     h4: {
       fontSize: fontSize.h4,

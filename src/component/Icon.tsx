@@ -18,7 +18,7 @@ export interface IconProps extends TouchableOpacityProps {
   /**
    * The name of the icon
    */
-  icon: React.JSX.Element;
+  icon: IconTypes | React.JSX.Element;
 
   /**
    * An optional tint color for the icon
