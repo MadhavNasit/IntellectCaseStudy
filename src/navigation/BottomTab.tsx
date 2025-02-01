@@ -15,6 +15,7 @@ import {
   SettingsFilledIcon,
   SettingsIcon,
 } from 'asset/svgs';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Type definition for the Bottom Tab Navigator params.
@@ -49,6 +50,9 @@ const useScreenOptions = () => {
 const BottomTab = () => {
   const screenOptions = useScreenOptions();
 
+  // Translation hook
+  const { t } = useTranslation();
+
   /**
    * Generates screen options for each tab.
    *
@@ -81,7 +85,7 @@ const BottomTab = () => {
         name="home"
         component={HomeScreen}
         options={generateScreenOptions({
-          title: 'Home',
+          title: t('home.title'),
           icon: <HomeIcon />,
           iconFilled: <HomeFilledIcon />,
         })}
@@ -90,7 +94,7 @@ const BottomTab = () => {
         name="daily"
         component={DailyScreen}
         options={generateScreenOptions({
-          title: 'Daily',
+          title: t('daily.title'),
           icon: <DiamondIcon />,
           iconFilled: <DiamondFilledIcon />,
         })}
@@ -99,7 +103,7 @@ const BottomTab = () => {
         name="settings"
         component={SettingsScreen}
         options={generateScreenOptions({
-          title: 'Settings',
+          title: t('settings.title'),
           icon: <SettingsIcon />,
           iconFilled: <SettingsFilledIcon />,
         })}

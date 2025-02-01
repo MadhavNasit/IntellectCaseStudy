@@ -15,6 +15,7 @@ module.exports = {
           asset: './src/asset',
           hook: './src/hook',
           theme: './src/theme',
+          i18n: './src/i18n',
         },
       },
     ],
