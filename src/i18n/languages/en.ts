@@ -18,6 +18,12 @@ const en = {
       desc: 'Try these activities daily to see long term improvement in your mental-health & productivity',
       setReminder: 'Set reminder',
     },
+    progress: {
+      title_zero: 'Finish 3+ exercises today to stay calm and focused',
+      title_one: '{{count}}/{{total}} Completed. Keep going',
+      title_other: '{{count}}/{{total}} Completed. Keep going',
+      sessionTogether: '{{count}} people doing session with you this hour',
+    },
   },
   settings: {
     title: 'Settings',

@@ -5,3 +5,4 @@ export { default as DiamondFilledIcon } from './DiamondFilledIcon';
 export { default as SettingsIcon } from './SettingsIcon';
 export { default as SettingsFilledIcon } from './SettingsFilledIcon';
 export { default as BellIcon } from './BellIcon';
+export { default as FireIcon } from './FireIcon';

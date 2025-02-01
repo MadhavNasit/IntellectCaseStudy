@@ -41,4 +41,22 @@ export default (colors: Colors, insets: EdgeInsets) =>
       width: '100%',
       zIndex: 1,
     },
+
+    // progress style
+    progressWrapper: {
+      paddingVertical: vs(spacing.lg),
+      paddingHorizontal: s(spacing.md),
+      backgroundColor: colors.bg_secondary,
+    },
+    title: {
+      marginBottom: vs(spacing.xs),
+    },
+    progressBarContainer: {
+      marginBottom: vs(spacing.sm),
+    },
+    sessionContainer: {
+      flexDirection: 'row',
+      columnGap: s(spacing.xxs),
+      alignItems: 'center',
+    },
   });

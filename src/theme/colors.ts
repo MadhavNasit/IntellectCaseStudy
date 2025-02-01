@@ -13,6 +13,7 @@ export const colors = {
   red: '#F00001',
   darkGray: '#264b5b',
   cadetGrey: '#93a5ad',
+  softSand: '#eae2df',
 };
 
 export const themeColors = {
@@ -31,6 +32,7 @@ export const themeColors = {
   common: {
     primary: colors.deepNavy,
     secondary: colors.darkGray,
+    bg_secondary: colors.softSand,
     tab_active: colors.pearl,
     tab_inactive: colors.gray,
     danger: colors.red,

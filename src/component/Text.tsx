@@ -112,17 +112,17 @@ const makeStyles = (colors: Colors) =>
     h4: {
       fontSize: fontSize.h4,
       lineHeight: lineHeight[fontSize.h4],
-      fontFamily: typography.medium,
+      fontFamily: typography.regular,
     },
     h5: {
       fontSize: fontSize.h5,
       lineHeight: lineHeight[fontSize.h5],
-      fontFamily: typography.medium,
+      fontFamily: typography.regular,
     },
     h6: {
       fontSize: fontSize.h6,
       lineHeight: lineHeight[fontSize.h6],
-      fontFamily: typography.medium,
+      fontFamily: typography.regular,
     },
     body: {
       fontSize: fontSize.body,

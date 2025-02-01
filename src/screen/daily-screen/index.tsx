@@ -4,11 +4,10 @@ import { useTheme } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { iconRegistry } from 'asset/icons';
-import { Button, Greeting, Icon, Screen, Text } from 'component';
-import { vs } from 'utils';
-import { BellIcon } from 'asset/svgs';
+import { Button, Greeting, Icon, Screen, Text, ProgressBar } from 'component';
+import { mvs, vs } from 'utils';
+import { BellIcon, FireIcon } from 'asset/svgs';
 import makeStyles from './styles';
-import { ProgressBar } from 'src/component/ProgressBar';
 
 /**
  * DailyScreen component renders a banner with greeting, information about daily activities,
@@ -48,10 +47,33 @@ export const DailyScreen = (): JSX.Element => {
     </View>
   );
 
+  /**
+   * Renders the progress section displaying user progress.
+   * Includes a title, a progress bar, and a session count.
+   */
+  const renderProgress = () => (
+    <View style={styles.progressWrapper}>
+      <Text
+        size="h5"
+        tx="daily.progress.title"
+        txOptions={{ count: 1, total: 3 }}
+        style={styles.title}
+      />
+      <ProgressBar
+        progress={0.33}
+        styleOverrides={{ container: styles.progressBarContainer }}
+      />
+      <View style={styles.sessionContainer}>
+        <Icon icon={<FireIcon />} size={mvs(16)} color={colors.text} />
+        <Text tx="daily.progress.sessionTogether" txOptions={{ count: 2615 }} />
+      </View>
+    </View>
+  );
+
   return (
     <Screen safeAreaEdges={[]} preset="scroll">
       {renderBanner()}
-      <ProgressBar progress={1} />
+      {renderProgress()}
     </Screen>
   );
 };

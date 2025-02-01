@@ -45,8 +45,13 @@ export default i18n;
 export type TranslationKeys = RecursiveKeyOf<Translations>;
 
 // Helper type to create dot notation paths
+type PluralKeys = 'zero' | 'one' | 'two' | 'few' | 'many' | 'other';
+
 type RecursiveKeyOf<TObj extends Record<string, any>> = {
   [TKey in keyof TObj & string]: TObj[TKey] extends Record<string, any>
-    ? `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
-    : `${TKey}`;
+    ? // @ts-ignore
+      `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
+    : TKey extends `${infer BaseKey}_${PluralKeys}`
+    ? BaseKey // Collapse plural keys into a single base key
+    : TKey;
 }[keyof TObj & string];

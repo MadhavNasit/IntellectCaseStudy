@@ -12,11 +12,11 @@ export const fontSize = {
   /** Font size for Heading 3 */
   h3: mvs(18),
   /** Font size for Heading 4 */
-  h4: mvs(14),
+  h4: mvs(16),
   /** Font size for Heading 5 */
-  h5: mvs(12),
+  h5: mvs(14),
   /** Font size for Heading 6 */
-  h6: mvs(10),
+  h6: mvs(12),
   /** Font size for Body text */
   body: mvs(12),
   /** Font size for Body text variant 1 */
