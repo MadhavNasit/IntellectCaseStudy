@@ -141,7 +141,7 @@ const makeStyles = (colors: Colors) =>
     } as ViewStyle,
     text: {
       fontFamily: typography.semiBold,
-      fontSize: fontSize.h4,
+      fontSize: fontSize.h5,
       lineHeight: lineHeight[fontSize.h4],
     } as TextStyle,
   });
