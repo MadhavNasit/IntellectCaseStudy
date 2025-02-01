@@ -16,6 +16,7 @@ module.exports = {
           hook: './src/hook',
           theme: './src/theme',
           i18n: './src/i18n',
+          utils: './src/utils',
         },
       },
     ],

@@ -12,6 +12,7 @@
       "theme": ["./src/theme"],
       "theme/*": ["./src/theme/*"],
       "i18n": ["./src/i18n"],
+      "utils": ["./src/utils"],
       "*": ["./*"],
       "root/*": ["./*"],
       "src/*": ["./src/*"]
