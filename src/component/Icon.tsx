@@ -79,7 +79,7 @@ export const Icon = (props: IconProps) => {
   ];
 
   const svgStyle: React.SVGProps<SVGSVGElement> = {
-    ...(color !== undefined && { fill: color }),
+    ...(color !== undefined && { fill: color, color: color }),
     ...(size !== undefined && { width: size, height: size }),
     ...svgStyleOverride,
   };

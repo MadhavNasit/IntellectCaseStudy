@@ -13,6 +13,8 @@ module.exports = {
           screen: './src/screen',
           component: './src/component',
           asset: './src/asset',
+          hook: './src/hook',
+          theme: './src/theme',
         },
       },
     ],
