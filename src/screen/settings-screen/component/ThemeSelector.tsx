@@ -27,17 +27,17 @@ export const ThemeSelector = () => {
       <Text tx="settings.chooseTheme" size="h3" style={styles.title} />
       <Button
         titleTx="settings.auto"
-        preset={theme === 'auto' ? 'primary' : 'outline'}
+        preset={theme === 'auto' ? 'secondary' : 'outline'}
         onPress={() => handleThemeChange('auto')}
       />
       <Button
         titleTx="settings.light"
-        preset={theme === 'light' ? 'primary' : 'outline'}
+        preset={theme === 'light' ? 'secondary' : 'outline'}
         onPress={() => handleThemeChange('light')}
       />
       <Button
         titleTx="settings.dark"
-        preset={theme === 'dark' ? 'primary' : 'outline'}
+        preset={theme === 'dark' ? 'secondary' : 'outline'}
         onPress={() => handleThemeChange('dark')}
       />
     </View>
@@ -46,7 +46,6 @@ export const ThemeSelector = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     paddingVertical: vs(spacing.lg),
     paddingHorizontal: s(spacing.md),
     rowGap: vs(spacing.sm),

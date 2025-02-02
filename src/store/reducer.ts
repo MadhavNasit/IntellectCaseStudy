@@ -9,7 +9,7 @@ import { appSlice, dailySlice } from './slice';
 const persistAppConfig = {
   key: 'app',
   storage: reduxPersistStorage,
-  whitelist: ['theme'],
+  whitelist: ['theme', 'language'],
 };
 
 /**

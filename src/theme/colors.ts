@@ -17,6 +17,7 @@ export const colors = {
   cadetGrey: '#93a5ad',
   charlestonGreen: '#2A2A2A',
   softSand: '#eae2df',
+  muted: '#c4b7a6',
   brightGray: '#E9E9E9',
   deepSpace: '#405a71',
   metalGray: '#768087',
@@ -33,6 +34,7 @@ export const themeColors = {
     text_light: colors.deepSpace,
     border: colors.platinum,
     card_secondary: colors.brightGray,
+    bg_secondary: colors.softSand,
   },
   dark: {
     background: colors.ebony,
@@ -41,6 +43,7 @@ export const themeColors = {
     text_light: colors.ivory,
     border: colors.gray,
     card_secondary: colors.charlestonGreen,
+    bg_secondary: colors.muted,
   },
   common: {
     primary: colors.deepNavy,
