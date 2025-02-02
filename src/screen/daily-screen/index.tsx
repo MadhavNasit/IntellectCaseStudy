@@ -1,12 +1,15 @@
 import React, { useCallback, useMemo } from 'react';
-import { Image, View } from 'react-native';
+import { Alert, Image, View } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 import { iconRegistry } from 'asset/icons';
 import { Button, Greeting, Icon, Screen, Text, ProgressBar } from 'component';
+import { resetCompleted, selectSessionStats, useAppSelector } from 'store';
 import { mvs, vs } from 'utils';
-import { BellIcon, FireIcon } from 'asset/svgs';
+import { FireIcon, ResetIcon } from 'asset/svgs';
 import { SessionList } from './component';
 import makeStyles from './styles';
 
@@ -18,9 +21,40 @@ export const DailyScreen = (): JSX.Element => {
   // Manage safe area insets
   const insets = useSafeAreaInsets();
 
+  // Redux hooks
+  const { progress, completed } = useAppSelector(selectSessionStats);
+  const dispatch = useDispatch();
+
+  // Translation hooks
+  const { t } = useTranslation();
+
   // Theme and styles hook
   const { colors } = useTheme();
   const styles = useMemo(() => makeStyles(colors, insets), [colors, insets]);
+
+  /**
+   * Reset session completed status
+   */
+  const resetSession = useCallback(() => {
+    Alert.alert(
+      t('common.appName'),
+      t('daily.resetAlert'),
+      [
+        {
+          text: t('common.cancel'),
+          style: 'cancel',
+        },
+        {
+          text: t('common.reset'),
+          style: 'default',
+          onPress: () => dispatch(resetCompleted()),
+        },
+      ],
+      {
+        cancelable: true,
+      },
+    );
+  }, [dispatch, t]);
 
   /**
    * Renders the banner section with a greeting, informational text, and reminder button.
@@ -32,13 +66,14 @@ export const DailyScreen = (): JSX.Element => {
           <Greeting size="h2" style={styles.greeting} />
           <Text tx="daily.banner.desc" style={styles.bannerText} />
           <Button
-            titleTx="daily.banner.setReminder"
+            titleTx="daily.banner.resetSession"
             preset="outline"
             leftComponent={() => (
-              <Icon icon={<BellIcon />} size={vs(20)} color={colors.white} />
+              <Icon icon={<ResetIcon />} size={vs(20)} color={colors.white} />
             )}
             buttonStyle={styles.button}
             buttonTextStyle={styles.buttonText}
+            onPress={resetSession}
           />
         </View>
         <Image
@@ -48,7 +83,7 @@ export const DailyScreen = (): JSX.Element => {
         />
       </View>
     ),
-    [colors, styles],
+    [colors, styles, resetSession],
   );
 
   /**
@@ -61,11 +96,11 @@ export const DailyScreen = (): JSX.Element => {
         <Text
           size="h5"
           tx="daily.progress.title"
-          txOptions={{ count: 1, total: 3 }}
+          txOptions={{ count: completed > 3 ? 3 : completed, total: 3 }}
           style={styles.title}
         />
         <ProgressBar
-          progress={0.4}
+          progress={progress}
           styleOverrides={{ container: styles.progressBarContainer }}
         />
         <View style={styles.sessionContainer}>
@@ -77,7 +112,7 @@ export const DailyScreen = (): JSX.Element => {
         </View>
       </View>
     ),
-    [colors, styles],
+    [colors, styles, progress, completed],
   );
 
   /**
