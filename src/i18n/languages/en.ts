@@ -11,6 +11,7 @@ const en = {
   },
   home: {
     title: 'Home',
+    outOf: ' out of {{total}}',
   },
   daily: {
     title: 'Daily',

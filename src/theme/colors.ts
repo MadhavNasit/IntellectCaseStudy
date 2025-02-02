@@ -19,6 +19,9 @@ export const colors = {
   brightGray: '#E9E9E9',
   deepSpace: '#405a71',
   metalGray: '#768087',
+  greenGood: '#7ab298',
+  moderateYellow: '#ffb451',
+  badRed: '#ed5b6e',
 };
 
 export const themeColors = {
@@ -45,5 +48,8 @@ export const themeColors = {
     tab_inactive: colors.gray,
     danger: colors.red,
     active_card: colors.metalGray,
+    good: colors.greenGood,
+    moderate: colors.moderateYellow, // Using the defined name here
+    bad: colors.badRed, // Using the defined name here
   },
 };
