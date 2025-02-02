@@ -129,7 +129,7 @@ const makeStyles = (colors: Colors) =>
       backgroundColor: 'transparent',
       borderWidth: 2,
       borderColor: colors.primary,
-      color: colors.primary,
+      color: colors.text,
     } as ViewStyle,
     buttonDisabled: {
       opacity: 0.4,

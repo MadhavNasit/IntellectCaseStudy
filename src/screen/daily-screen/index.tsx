@@ -104,10 +104,11 @@ export const DailyScreen = (): JSX.Element => {
           styleOverrides={{ container: styles.progressBarContainer }}
         />
         <View style={styles.sessionContainer}>
-          <Icon icon={<FireIcon />} size={mvs(16)} color={colors.text} />
+          <Icon icon={<FireIcon />} size={mvs(16)} color={colors.ebony} />
           <Text
             tx="daily.progress.sessionTogether"
             txOptions={{ count: 2615 }}
+            style={styles.progressDesc}
           />
         </View>
       </View>

@@ -36,6 +36,10 @@ const en = {
   },
   settings: {
     title: 'Settings',
+    chooseTheme: 'Choose Theme',
+    auto: 'Auto',
+    light: 'Light',
+    dark: 'Dark',
   },
 };
 
