@@ -51,6 +51,10 @@ export default (colors: Colors, insets: EdgeInsets) =>
     },
     title: {
       marginBottom: vs(spacing.xs),
+      color: colors.ebony,
+    },
+    progressDesc: {
+      color: colors.ebony,
     },
     progressBarContainer: {
       marginBottom: vs(spacing.sm),
