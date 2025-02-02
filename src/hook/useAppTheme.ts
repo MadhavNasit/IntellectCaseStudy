@@ -1,15 +1,22 @@
 import { useMemo } from 'react';
 import { useColorScheme } from 'react-native';
+import { useAppSelector, selectTheme } from 'store';
 import { darkTheme, lightTheme } from 'theme';
 
 /**
- * Custom hook to get the current app theme based on the system color scheme.
- * @returns {object} The selected theme object (either `darkTheme` or `lightTheme`).
- *
- * TODO: Extend this hook to allow user-defined theme overrides instead of always returning the system default.
+ * Custom hook to get the current app theme based on the user's preference or system color scheme.
  */
 export const useAppTheme = () => {
   const scheme = useColorScheme();
+  const theme = useAppSelector(selectTheme);
 
-  return useMemo(() => (scheme === 'dark' ? darkTheme : lightTheme), [scheme]);
+  return useMemo(() => {
+    if (theme === 'dark') {
+      return darkTheme;
+    }
+    if (theme === 'light') {
+      return lightTheme;
+    }
+    return scheme === 'dark' ? darkTheme : lightTheme;
+  }, [theme, scheme]);
 };
