@@ -1,10 +1,11 @@
 import React, { useMemo, useCallback } from 'react';
 import { SectionList, SectionListProps, StyleSheet } from 'react-native';
-import { session, SessionItem, SessionType } from 'src/constants/daily_session';
-import { SessionCard } from './SessionCard';
-import { s, spacing, vs } from 'utils';
 import { useTheme } from '@react-navigation/native';
+
+import { s, spacing, vs } from 'utils';
 import { Text } from 'component';
+import { session, SessionItem, SessionType } from 'constant';
+import { SessionCard } from './SessionCard';
 
 /**
  * Represents a section of sessions grouped by time of day.

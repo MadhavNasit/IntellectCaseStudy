@@ -197,7 +197,6 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   innerStyle: {
-    flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'stretch',
   },

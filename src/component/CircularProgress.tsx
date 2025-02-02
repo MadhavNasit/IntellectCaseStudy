@@ -2,7 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, View, ViewStyle } from 'react-native';
 import Svg, { G, Linecap, Path } from 'react-native-svg';
 
-interface CircularProgressProps {
+export interface CircularProgressProps {
   /** Diameter of the circular progress (default: 140) */
   size?: number;
   /** Width of the progress stroke (default: 10) */
