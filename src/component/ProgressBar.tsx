@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import {
   View,
   Animated,
@@ -68,7 +68,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
     borderRadius = typeof height === 'number' ? height / 2 : vs(16),
     backgroundColor = colors.white,
     progressColor = colors.primary,
-    duration = 500,
+    duration = 1000,
     styleOverrides,
   } = props;
 
@@ -107,6 +107,9 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
     </View>
   );
 };
+
+const Memo = memo(ProgressBar);
+export default Memo;
 
 const styles = StyleSheet.create({
   progressBarContainer: {

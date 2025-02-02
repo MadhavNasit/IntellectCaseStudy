@@ -83,7 +83,7 @@ export const DailyScreen = (): JSX.Element => {
   /**
    * Combines the banner and progress sections as the list header.
    */
-  const renderListHeader = useCallback(
+  const renderListHeader = useMemo(
     () => (
       <>
         {renderBanner()}

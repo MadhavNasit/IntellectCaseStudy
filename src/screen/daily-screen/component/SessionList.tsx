@@ -83,6 +83,7 @@ const SessionList: React.FC<SessionListProps> = props => {
       renderItem={renderItem}
       renderSectionHeader={renderSectionHeader}
       stickySectionHeadersEnabled={false}
+      showsVerticalScrollIndicator={false}
       contentContainerStyle={[
         styles.contentContainer,
         { backgroundColor: colors.background },
