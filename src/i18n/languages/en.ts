@@ -40,6 +40,9 @@ const en = {
     auto: 'Auto',
     light: 'Light',
     dark: 'Dark',
+    chooseLanguage: 'Choose Language',
+    english: 'English',
+    french: 'French',
   },
 };
 
