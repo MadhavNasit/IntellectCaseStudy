@@ -12,6 +12,8 @@ const en = {
   home: {
     title: 'Home',
     outOf: ' out of {{total}}',
+    growthAreas: 'Your areas of growth are:',
+    strengthAreas: 'Your strengths are:',
   },
   daily: {
     title: 'Daily',

@@ -25,7 +25,7 @@ export interface CircularInsightProps extends CircularProgressProps {
  * CircularInsight component displays a circular progress indicator with
  * percentage, change indicator, and descriptive text with translation support.
  */
-export const CircularInsight: FC<CircularInsightProps> = ({
+export const CircularInsightItem: FC<CircularInsightProps> = ({
   progress = 0,
   change = 0,
   text,
@@ -63,15 +63,13 @@ export const CircularInsight: FC<CircularInsightProps> = ({
           <Text size="h3" style={styles.textCenter}>
             {progress}
           </Text>
-          {change !== 0 && (
-            <Text
-              text={change !== 0 ? `(${change})` : ''}
-              style={[
-                styles.textCenter,
-                { color: change > 0 ? colors.good : colors.bad },
-              ]}
-            />
-          )}
+          <Text
+            text={change !== 0 ? `(${change > 0 ? `+${change}` : change})` : ''}
+            style={[
+              styles.textCenter,
+              { color: change > 0 ? colors.good : colors.bad },
+            ]}
+          />
         </View>
       </CircularProgress>
       <View style={styles.detailsContainer}>

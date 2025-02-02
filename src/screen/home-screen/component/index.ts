@@ -1,1 +1,2 @@
-export * from './CircularInsight';
+export * from './CircularInsightItem';
+export * from './PersonalInsightCard';
