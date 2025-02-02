@@ -80,7 +80,7 @@ const BottomTab = () => {
   );
 
   return (
-    <Tab.Navigator screenOptions={screenOptions}>
+    <Tab.Navigator initialRouteName="home" screenOptions={screenOptions}>
       <Tab.Screen
         name="home"
         component={HomeScreen}

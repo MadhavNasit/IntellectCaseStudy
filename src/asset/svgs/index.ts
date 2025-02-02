@@ -4,3 +4,7 @@ export { default as DiamondIcon } from './DiamondIcon';
 export { default as DiamondFilledIcon } from './DiamondFilledIcon';
 export { default as SettingsIcon } from './SettingsIcon';
 export { default as SettingsFilledIcon } from './SettingsFilledIcon';
+export { default as BellIcon } from './BellIcon';
+export { default as FireIcon } from './FireIcon';
+export { default as PlayIcon } from './PlayIcon';
+export { default as CheckMark } from './CheckMark';

@@ -1,4 +1,4 @@
-import {vs} from 'utils';
+import { mvs } from './scale';
 
 /**
  * Font sizes for different text styles.
@@ -6,28 +6,28 @@ import {vs} from 'utils';
  */
 export const fontSize = {
   /** Font size for Heading 1 */
-  h1: vs(30),
+  h1: mvs(30),
   /** Font size for Heading 2 */
-  h2: vs(22),
+  h2: mvs(22),
   /** Font size for Heading 3 */
-  h3: vs(18),
+  h3: mvs(18),
   /** Font size for Heading 4 */
-  h4: vs(15),
+  h4: mvs(16),
   /** Font size for Heading 5 */
-  h5: vs(12),
+  h5: mvs(14),
   /** Font size for Heading 6 */
-  h6: vs(10),
+  h6: mvs(12),
   /** Font size for Body text */
-  body: vs(14),
+  body: mvs(12),
   /** Font size for Body text variant 1 */
-  body1: vs(12),
+  body1: mvs(10),
   /** Font size for Body text variant 2 */
-  body2: vs(10),
+  body2: mvs(8),
 };
 
 /**
  * Ideally line height value should be between 1.2 to 1.6
- * @default - 1.4
+ * @default - 1.2
  */
 const lineHeightFactor = 1.4;
 

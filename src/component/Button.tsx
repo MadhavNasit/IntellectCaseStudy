@@ -11,16 +11,25 @@ import { useTheme } from '@react-navigation/native';
 import { Text } from 'component';
 import { Colors } from 'theme/theme.types';
 import { fontSize, lineHeight, s, spacing, typography, vs } from 'utils';
+import { TranslationKeys } from 'i18n';
+import { TOptions } from 'i18next';
 
 interface AppButtonProps extends TouchableOpacityProps {
   /** The text to be displayed on the button. */
-  title: string;
+  title?: string;
+  /** Button text which is looked up via i18n. */
+  titleTx?: TranslationKeys;
+  /**
+   * Optional options to pass to i18n. Useful for interpolation
+   * as well as explicitly setting locale or translation fallbacks.
+   */
+  txOptions?: TOptions;
   /** The style preset to be applied ('primary', 'secondary', 'outline', 'link'). */
   preset?: 'primary' | 'secondary' | 'outline' | 'link';
   /** Custom styles to be applied to the button. */
-  buttonStyle?: ViewStyle;
+  buttonStyle?: ViewStyle | ViewStyle[];
   /** Custom styles for the button's text. */
-  buttonTextStyle?: TextStyle;
+  buttonTextStyle?: TextStyle | TextStyle[];
   /** Optional component to be rendered on the left of the text. */
   leftComponent?: () => JSX.Element;
   /** Optional component to be rendered on the right of the text. */
@@ -35,6 +44,8 @@ interface AppButtonProps extends TouchableOpacityProps {
  */
 export const Button: React.FC<AppButtonProps> = ({
   title,
+  titleTx,
+  txOptions,
   preset = 'primary',
   buttonStyle = {},
   buttonTextStyle = {},
@@ -80,6 +91,9 @@ export const Button: React.FC<AppButtonProps> = ({
       {...rest}>
       {leftComponent && leftComponent()}
       <Text
+        text={title}
+        tx={titleTx}
+        txOptions={txOptions}
         numberOfLines={1}
         style={[styles.text, { color: defaultStyle.color }, buttonTextStyle]}>
         {title}
@@ -127,7 +141,7 @@ const makeStyles = (colors: Colors) =>
     } as ViewStyle,
     text: {
       fontFamily: typography.semiBold,
-      fontSize: fontSize.h4,
+      fontSize: fontSize.h5,
       lineHeight: lineHeight[fontSize.h4],
     } as TextStyle,
   });
