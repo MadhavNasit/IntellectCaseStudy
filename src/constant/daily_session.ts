@@ -9,6 +9,7 @@ export interface SessionItem {
   heading: string;
   description: string;
   type: SessionType;
+  completed: boolean;
 }
 
 const session: SessionItem[] = [
@@ -18,6 +19,7 @@ const session: SessionItem[] = [
     description:
       'Embrace self-compassion and shift from body criticism to kindness and appreciation with this guided meditation',
     type: SessionType.Morning,
+    completed: false,
   },
   {
     id: 2,
@@ -25,24 +27,28 @@ const session: SessionItem[] = [
     description:
       'Equip yourself with skills to maintain boundaries and self-respect in relationships',
     type: SessionType.Morning,
+    completed: false,
   },
   {
     id: 3,
     heading: 'Appearance ideals in the media',
     description: 'Session',
     type: SessionType.Afternoon,
+    completed: false,
   },
   {
     id: 4,
     heading: 'Body Dysmorphic Disorder Screener',
     description: '10-item screening questionnaire for Body Dysmorphic Disorder',
     type: SessionType.Afternoon,
+    completed: false,
   },
   {
     id: 5,
     heading: 'Overcoming Self-Doubt',
     description: 'Unleash your full potential by silencing your inner critic',
     type: SessionType.Evening,
+    completed: false,
   },
   {
     id: 6,
@@ -50,6 +56,7 @@ const session: SessionItem[] = [
     description:
       'Challenge the negative, self-doubting voice in your head that undermines your confidence',
     type: SessionType.Evening,
+    completed: false,
   },
 ];
 

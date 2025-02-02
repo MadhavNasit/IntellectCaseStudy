@@ -1,11 +1,17 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { SectionList, SectionListProps, StyleSheet } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 
 import { s, spacing, vs } from 'utils';
 import { Text } from 'component';
-import { session, SessionItem, SessionType } from 'constant';
+import { SessionItem } from 'constant';
 import { SessionCard } from './SessionCard';
+import {
+  markCompleted,
+  selectGroupedSessions,
+  useAppDispatch,
+  useAppSelector,
+} from 'store';
 
 /**
  * Represents a section of sessions grouped by time of day.
@@ -31,28 +37,21 @@ interface SessionListProps
   > {}
 
 /**
- * Mapped headings for each session type.
- */
-const headings: Record<SessionType, string> = {
-  Morning: '🌞 Morning',
-  Afternoon: '☕ Afternoon',
-  Evening: '🌙 Evening',
-};
-
-/**
  * Renders a list of daily sessions grouped by time of day.
  * Utilizes memoization and callbacks to optimize performance.
  */
 const SessionList: React.FC<SessionListProps> = props => {
   const { colors } = useTheme();
+  const dispatch = useAppDispatch();
+  const groupedSessions = useAppSelector(selectGroupedSessions);
 
-  /** Memoize grouped sessions to prevent unnecessary recalculations */
-  const groupedSessions = useMemo<SessionSection[]>(() => {
-    return Object.values(SessionType).map(type => ({
-      title: headings[type],
-      data: session.filter(item => item.type === type),
-    }));
-  }, []);
+  /** Mark session as completed */
+  const markAsCompleted = useCallback(
+    (id: number) => {
+      dispatch(markCompleted(id));
+    },
+    [dispatch],
+  );
 
   /** Memoized renderItem function to prevent unnecessary re-renders */
   const renderItem = useCallback(
@@ -61,9 +60,11 @@ const SessionList: React.FC<SessionListProps> = props => {
         key={index}
         heading={item.heading}
         description={item.description}
+        completed={item.completed}
+        onPress={() => markAsCompleted(item.id)}
       />
     ),
-    [],
+    [markAsCompleted],
   );
 
   // Memoized renderSectionHeader function

@@ -8,3 +8,4 @@ export { default as BellIcon } from './BellIcon';
 export { default as FireIcon } from './FireIcon';
 export { default as PlayIcon } from './PlayIcon';
 export { default as CheckMark } from './CheckMark';
+export { default as ResetIcon } from './ResetIcon';

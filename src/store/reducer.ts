@@ -1,7 +1,7 @@
 import { UnknownAction, combineSlices } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import { reduxPersistStorage } from 'utils';
-import { appSlice } from './slice';
+import { appSlice, dailySlice } from './slice';
 
 /**
  * persistence config for app reducer
@@ -13,10 +13,20 @@ const persistAppConfig = {
 };
 
 /**
+ * persistence config for app reducer
+ */
+const persistDailyConfig = {
+  key: 'daily',
+  storage: reduxPersistStorage,
+  whitelist: ['sessions'],
+};
+
+/**
  * Combine all the reducers
  */
 const appReducer = combineSlices({
   app: persistReducer(persistAppConfig, appSlice.reducer),
+  daily: persistReducer(persistDailyConfig, dailySlice.reducer),
 });
 
 /**

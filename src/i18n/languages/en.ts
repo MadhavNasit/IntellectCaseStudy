@@ -1,6 +1,8 @@
 const en = {
   common: {
     appName: 'IntellectCaseStudy',
+    reset: 'Reset',
+    cancel: 'Cancel',
   },
   component: {
     greeting: {
@@ -17,9 +19,11 @@ const en = {
   },
   daily: {
     title: 'Daily',
+    resetAlert: 'This will reset your session progress.',
     banner: {
       desc: 'Try these activities daily to see long term improvement in your mental-health & productivity',
       setReminder: 'Set reminder',
+      resetSession: 'Reset Session',
     },
     progress: {
       title_zero: 'Finish 3+ exercises today to stay calm and focused',
