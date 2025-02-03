@@ -50,7 +50,7 @@ export const Card = ({
   >;
 
   return (
-    <Wrapper {...rest} style={[styles.card, styleOverride]}>
+    <Wrapper {...rest} testID="card" style={[styles.card, styleOverride]}>
       {/* Render child components inside the card */}
       {children}
     </Wrapper>

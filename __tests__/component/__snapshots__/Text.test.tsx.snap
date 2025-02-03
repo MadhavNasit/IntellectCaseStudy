@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component matches snapshot with children text 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#000000",
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+      undefined,
+    ]
+  }
+>
+  Some Child Text
+</Text>
+`;
+
+exports[`Text Component matches snapshot with custom styles 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#000000",
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+      {
+        "color": "#000000",
+      },
+    ]
+  }
+>
+  Styled Text
+</Text>
+`;
+
+exports[`Text Component matches snapshot with size prop 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#000000",
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontFamily": "Poppins-SemiBold",
+        "fontSize": 35,
+        "lineHeight": 49,
+      },
+      undefined,
+    ]
+  }
+>
+  Header Text
+</Text>
+`;
+
+exports[`Text Component matches snapshot with text prop 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#000000",
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+      undefined,
+    ]
+  }
+>
+  Hello World
+</Text>
+`;
+
+exports[`Text Component matches snapshot with translated text 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#000000",
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+      undefined,
+    ]
+  }
+>
+  IntellectCaseStudy
+</Text>
+`;

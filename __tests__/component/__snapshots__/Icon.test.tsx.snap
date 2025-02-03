@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Component renders correctly with default styles 1`] = `
+<View
+  testID="icon-view"
+>
+  <Image
+    source={
+      {
+        "testUri": "../../../src/asset/icons/daily-banner/daily-banner.png",
+      }
+    }
+    style={
+      [
+        {
+          "resizeMode": "contain",
+        },
+        false,
+        false,
+        undefined,
+      ]
+    }
+    testID="icon-image"
+  />
+</View>
+`;

@@ -86,12 +86,19 @@ export const Icon = (props: IconProps) => {
 
   const getIconComponent = (icon: IconTypes | React.JSX.Element) => {
     if (typeof icon === 'string') {
-      return <Image style={imageStyle} source={iconRegistry[icon]} />;
+      return (
+        <Image
+          testID="icon-image"
+          style={imageStyle}
+          source={iconRegistry[icon]}
+        />
+      );
     } else if (React.isValidElement(icon)) {
-      // Check if the icon is a valid React element
       return React.cloneElement(
-        icon as React.ReactElement<React.SVGProps<SVGSVGElement>>,
-        svgStyle,
+        icon as React.ReactElement<
+          React.SVGProps<SVGSVGElement> & { testID?: string }
+        >,
+        { ...svgStyle, testID: 'svg-icon' },
       );
     } else {
       return <></>;
@@ -99,7 +106,10 @@ export const Icon = (props: IconProps) => {
   };
 
   return (
-    <Wrapper {...WrapperProps} style={containerStyleOverride}>
+    <Wrapper
+      testID={isPressable ? 'icon-touchable' : 'icon-view'}
+      {...WrapperProps}
+      style={containerStyleOverride}>
       {getIconComponent(icon)}
     </Wrapper>
   );

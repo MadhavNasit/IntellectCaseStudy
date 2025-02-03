@@ -39,6 +39,7 @@ export const SessionCard: React.FC<SessionCardProps> = ({
     <Card style={styles.card} {...rest}>
       <View style={styles.iconWrapper}>
         <Icon
+          testID={completed ? 'checkmark-icon' : 'play-icon'}
           icon={completed ? <CheckMark /> : <PlayIcon />}
           size={vs(completed ? 28 : 18)}
           color={colors.white}
