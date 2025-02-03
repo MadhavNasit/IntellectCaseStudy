@@ -154,6 +154,7 @@ export const Screen = (props: ScreenProps) => {
 
   return (
     <View
+      testID="screen"
       style={[
         styles.containerStyle,
         { backgroundColor: backgroundColor || colors.background },

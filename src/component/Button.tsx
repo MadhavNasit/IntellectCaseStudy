@@ -83,6 +83,7 @@ export const Button: React.FC<AppButtonProps> = ({
 
   return (
     <TouchableOpacity
+      testID="button"
       style={[defaultStyle, buttonStyle]}
       disabled={disabled}
       {...(preset === 'link' && {

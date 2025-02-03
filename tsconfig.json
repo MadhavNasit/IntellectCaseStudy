@@ -17,6 +17,7 @@
       "store": ["src/store"],
       "store/*": ["src/store/*"],
       "constant/*": ["src/constant/*"],
+      "screen/*": ["src/screen/*"],
       "*": ["./*"],
       "root/*": ["./*"],
       "src/*": ["./src/*"]

@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SessionCard matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e6e4e5",
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "paddingHorizontal": 16,
+        "paddingVertical": 21,
+      },
+      {
+        "alignItems": "center",
+        "backgroundColor": undefined,
+        "borderWidth": 0,
+        "columnGap": 16,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "marginHorizontal": 16,
+      },
+    ]
+  }
+  testID="card"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 23,
+        "height": 47,
+        "justifyContent": "center",
+        "width": 47,
+      }
+    }
+  >
+    <View
+      testID="play-icon"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={23}
+        bbWidth={23}
+        color="#FFFFFF"
+        fill="#FFFFFF"
+        focusable={false}
+        height={23}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 23,
+              "width": 23,
+            },
+          ]
+        }
+        testID="svg-icon"
+        vbHeight={512}
+        vbWidth={512}
+        width={23}
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4294967295,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M133 440a35.37 35.37 0 0 1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0 1 35.77.45l247.85 148.36a36 36 0 0 1 0 61l-247.89 148.4A35.5 35.5 0 0 1 133 440z"
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "rowGap": 5,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "Poppins-Regular",
+          },
+          {
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 19,
+            "lineHeight": 27,
+          },
+          {
+            "color": "#000000",
+            "fontFamily": "Poppins-Medium",
+          },
+        ]
+      }
+    >
+      Snapshot Test
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "Poppins-Regular",
+          },
+          {
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      This is a snapshot test.
+    </Text>
+  </View>
+</View>
+`;
