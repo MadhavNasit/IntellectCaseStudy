@@ -26,9 +26,9 @@ const en = {
       resetSession: 'Reset Session',
     },
     progress: {
-      title_zero: 'Finish 3+ exercises today to stay calm and focused',
-      title_one: '{{count}}/{{total}} Completed. Keep going',
-      title_other: '{{count}}/{{total}} Completed. Keep going',
+      title_zero: 'Finish 3+ exercises today to stay calm and focused', // t('progress.title', { count: 0 })
+      title_one: '{{count}}/{{total}} Completed. Keep going', // t('progress.title', { count: 1, total: 3 })
+      title_other: '{{count}}/{{total}} Completed. Keep going', // t('progress.title', { count: 3, total: 3 })
       sessionTogether: '{{count}} people doing session with you this hour',
     },
     quote:

@@ -15,7 +15,7 @@ export const HomeScreen = () => {
   const { strengthAreas, growthAreas } = useMemo(() => {
     return insights.reduce(
       (acc, insight) => {
-        if (insight.progress >= 85) {
+        if (insight.progress >= 75) {
           acc.strengthAreas.push(insight);
         } else {
           acc.growthAreas.push(insight);
