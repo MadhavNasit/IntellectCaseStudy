@@ -54,7 +54,7 @@ export const themeColors = {
     danger: colors.red,
     active_card: colors.metalGray,
     good: colors.greenGood,
-    moderate: colors.moderateYellow, // Using the defined name here
-    bad: colors.badRed, // Using the defined name here
+    moderate: colors.moderateYellow,
+    bad: colors.badRed,
   },
 };

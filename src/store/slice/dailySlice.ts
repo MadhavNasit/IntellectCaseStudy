@@ -5,7 +5,7 @@ interface SessionState {
   /**
    * An array of session items, each containing session data and a completion status.
    */
-  sessions: (SessionItem & { completed: boolean })[];
+  sessions: SessionItem[];
 }
 
 // Initial states
